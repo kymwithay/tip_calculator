@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbv-If-Lp9">
-                                <rect key="frame" x="314" y="171" width="45" height="21"/>
+                                <rect key="frame" x="247" y="171" width="112" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -53,7 +53,7 @@
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kh-Vk-Ej9">
-                                <rect key="frame" x="314" y="284" width="45" height="21"/>
+                                <rect key="frame" x="235" y="284" width="124" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -65,6 +65,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="calculatingTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="k2f-C4-jUi"/>
+                                </connections>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CY0-c8-3w4">
                                 <rect key="frame" x="16" y="335" width="343" height="29"/>
@@ -74,6 +77,9 @@
                                     <segment title="15%"/>
                                     <segment title="20%"/>
                                 </segments>
+                                <connections>
+                                    <action selector="calculatingTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="Z87-j8-Wx0"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2O-KZ-qZm">
                                 <rect key="frame" x="16" y="284" width="38" height="21"/>
@@ -90,6 +96,12 @@
                             <outletCollection property="gestureRecognizers" destination="IRG-Q9-4rU" appends="YES" id="e5q-T0-6DA"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="billField" destination="mhs-pD-cfE" id="pWa-0C-d2q"/>
+                        <outlet property="tipController" destination="CY0-c8-3w4" id="PKz-A1-Pk3"/>
+                        <outlet property="tipLabel" destination="Bbv-If-Lp9" id="s1A-2e-cAw"/>
+                        <outlet property="totalLabel" destination="3kh-Vk-Ej9" id="i2m-7w-52e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="IRG-Q9-4rU">
